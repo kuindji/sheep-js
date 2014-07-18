@@ -1,0 +1,1 @@
+/Users/kuindji/projects/js/observable/metaphorjs.observable.js

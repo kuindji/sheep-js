@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sheep</title>
+    <script src="rsc/metaphorjs.observable.js"></script>
+    <script src="src/Sheep.js"></script>
+    <script src="src/Position.js"></script>
+    <script src="src/Actions.js"></script>
+    <script src="src/Action.js"></script>
+    <script src="src/Easing.js"></script>
+    <script>
+
+        var sheep;
+
+        var addSheep = function() {
+            var sh = new Sheep({
+                floors: "window, .floor"
+            });
+
+            if (!sheep) {
+                sheep = sh;
+            }
+        };
+
+        window.setTimeout(function(){
+            addSheep();
+        }, 500);
+
+
+
+    </script>
+
+    <style>
+        body {
+            height: 1500px;
+        }
+        .floor {
+            border-top: 2px solid #ccc;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addSheep();">Add sheep</button>
+    <div class="floor" style="width: 200px; left: 400px; top: 200px;"></div>
+    <div class="floor" style="width: 200px; left: 200px; top: 400px;"></div>
+    <div class="floor" style="width: 200px; left: 600px; top: 600px;"></div>
+    <div class="floor" style="width: 200px; left: 200px; top: 1000px;"></div>
+</body>
+</html>
