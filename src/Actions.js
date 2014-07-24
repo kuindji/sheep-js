@@ -454,6 +454,7 @@ var actions = {
     },
 
     water: {
+        probability: 0.1,
         frameItv: 300,
         frames: [
             // turn around
